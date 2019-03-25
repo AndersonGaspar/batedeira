@@ -7,9 +7,34 @@ public class Batedeira {
 
     private String estadoColher = "Batedor";
     private int estadoVelocidade = 0;
+    private boolean estadoBatedeira = false;
 
 
+    public void ligar(){
+        if (getEstadoBatedeira()==false){
+            setEstadoBatedeira(true);
+            System.out.println("Batedeira ligada!");
+        }else{
+            System.out.println("A Batedeira já está ligada!");
+        }
+    }
 
+    public void desligar(){
+        if (getEstadoBatedeira()==true){
+            setEstadoBatedeira(false);
+            System.out.println("Batedeira desligada!");
+        }else{
+            System.out.println("A Batedeira já está desligada!");
+        }
+    }
+
+    public boolean getEstadoBatedeira() {
+        return estadoBatedeira;
+    }
+
+    public void setEstadoBatedeira(boolean estadoBatedeira) {
+        this.estadoBatedeira = estadoBatedeira;
+    }
 
     public void alterarVelocidade(){
         System.out.println("No momento a velocidade atual é " + getEstadoVelocidade());
