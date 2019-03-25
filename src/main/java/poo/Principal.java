@@ -6,6 +6,7 @@ public class Principal {
 
         Batedeira bat1 = new Batedeira();
 
-        bat1.alterarCoelher();
+        //bat1.alterarCoelher();
+        bat1.alterarVelocidade();
     }
 }

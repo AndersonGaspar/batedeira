@@ -6,7 +6,32 @@ public class Batedeira {
 
 
     private String estadoColher = "Batedor";
+    private int estadoVelocidade = 0;
 
+
+
+
+    public void alterarVelocidade(){
+        System.out.println("No momento a velocidade atual é " + getEstadoVelocidade());
+        System.out.println("Para qual velocidade você deseja alterar: 0, 1, 2 ou 3?");
+        Scanner teclado = new Scanner(System.in);
+        int aux = teclado.nextInt();
+        if ((aux==0)||(aux==1)||(aux==2)||(aux==3)){
+            setEstadoVelocidade(aux);
+            System.out.println("Velocidade alterada para " + getEstadoVelocidade() + " com sucesso!");
+        }else{
+            System.out.println("Velocidade não identificada");
+        }
+
+    }
+
+    public int getEstadoVelocidade() {
+        return estadoVelocidade;
+    }
+
+    public void setEstadoVelocidade(int estadoVelocidade) {
+        this.estadoVelocidade = estadoVelocidade;
+    }
 
     public void alterarCoelher(){
         System.out.println("A colher no momente é " + getEstadoCoelher());
